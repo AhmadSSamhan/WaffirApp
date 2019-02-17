@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_juices"
+            app:actionLayout="@layout/layout_menu_image"
+            app:showAsAction="ifRoom"
+            android:title="Juices" />
+        <item
+            android:id="@+id/nav_ice"
+            app:actionLayout="@layout/layout_menu_image"
+            app:showAsAction="ifRoom"
+            android:title="Ice" />
+        <item
+            android:id="@+id/nav_baby_milk"
+            app:actionLayout="@layout/layout_menu_image"
+            app:showAsAction="ifRoom"
+            android:title="Baby milk" />
+        <item
+            android:id="@+id/nav_tools"
+            app:actionLayout="@layout/layout_menu_image"
+            app:showAsAction="ifRoom"
+            android:title="Tools" />
+    </group>
+
+</menu>

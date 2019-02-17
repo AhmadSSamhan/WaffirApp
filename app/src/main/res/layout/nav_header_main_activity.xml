@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@color/grey_100"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center|start"
+        android:text="@string/nav_header_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/grey_700"
+        android:textSize="17sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/tv_gift_offer"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="bottom"
+        android:background="@color/red_300"
+        android:drawableEnd="@drawable/ic_arrow_right"
+        android:drawableRight="@drawable/ic_arrow_right"
+        android:gravity="center|start"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="@string/nav_header_title"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+</LinearLayout>

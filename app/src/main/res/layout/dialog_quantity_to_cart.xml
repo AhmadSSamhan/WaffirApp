@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ly_quantity_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="start|center"
+        android:hint="Write your note here (optional)"
+        android:paddingStart="15dp"
+        android:paddingLeft="15dp"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/blue_grey_100" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <ImageButton
+            android:id="@+id/btn_decrease_quantity"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight=".5"
+            android:background="@color/grey_100"
+            android:src="@drawable/ic_remove_black_36dp" />
+
+        <TextView
+            android:id="@+id/tv_quantity_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="@string/txt_quantity_is"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btn_increase_quantity"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight=".5"
+            android:background="@color/grey_100"
+            android:src="@drawable/ic_add_black_36dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_add_quantity_to_cart"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="Add to cart"
+        style="@style/ButtonGreen" />
+
+</LinearLayout>

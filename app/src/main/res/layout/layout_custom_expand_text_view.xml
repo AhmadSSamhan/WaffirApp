@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ly_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradient_white_radius"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ly_show_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:contentDescription="@string/large_text"
+                    android:background="@drawable/ic_box" />
+
+                <TextView
+                    android:id="@+id/description_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:paddingBottom="10dp"
+                    android:maxLines="5"
+                    android:textSize="14sp"
+                    android:clickable="false"
+                    android:paddingStart="10dp"
+                    android:scrollHorizontally="true"
+                    android:paddingEnd="10dp"
+                    android:textColorHint="@color/black"
+                    android:text="@string/large_text"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/view_opacity"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_gravity="bottom"
+            android:alpha="0.9"
+            android:src="@color/white" />
+    </FrameLayout>
+
+
+    <Button
+        android:id="@+id/btn_read_more"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@null"
+        android:text="@string/txt_read_more"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_read_less"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@null"
+        android:text="@string/txt_read_less"
+        android:textAllCaps="false"
+        android:visibility="gone" />
+</LinearLayout>
+

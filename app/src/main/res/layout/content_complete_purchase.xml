@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_100"
+    tools:context=".presentation.ui.activity.CompletePurchaseActivity">
+
+    <TextView
+        android:id="@+id/tv_receive_the_order"
+        style="@style/TextViewCompletePurchase"
+        android:drawableStart="@drawable/ic_map"
+        android:drawableLeft="@drawable/ic_map"
+        android:text="Receiving the application"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_inv_no"
+        style="@style/TextViewCompletePurchase"
+        android:layout_marginTop="15dp"
+        android:drawableStart="@drawable/ic_bills"
+        android:drawableLeft="@drawable/ic_bills"
+        android:text="Invoice no :21423"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_receive_the_order" />
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/TextViewCompletePurchase"
+        android:layout_marginTop="15dp"
+        android:drawableStart="@drawable/ic_box"
+        android:drawableLeft="@drawable/ic_box"
+        android:text="All Items"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_inv_no" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_purchase_complete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="15dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/blue_grey_100"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <EditText
+        android:id="@+id/textView12"
+        style="@style/TextViewCompletePurchase"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:drawableStart="@drawable/ic_pen"
+        android:drawableLeft="@drawable/ic_pen"
+        android:gravity="start|center"
+        android:hint="@string/your_notes_option"
+        android:inputType="text"
+        android:maxLines="4"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_view_purchase_complete" />
+
+    <TextView
+        android:id="@+id/tv_delivery_cost"
+        style="@style/TextViewCompletePurchase"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:drawableStart="@drawable/ic_deil"
+        android:drawableLeft="@drawable/ic_deil"
+        android:text="Delivery cost:Free"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <include
+        android:id="@+id/layout_total_info"
+        layout="@layout/layout_total_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_delivery_cost" />
+
+    <View
+        android:id="@+id/view333"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@drawable/ic_linebill"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_total_info" />
+
+    <Button
+        android:id="@+id/btn_complete"
+        style="@style/ButtonGreen"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="15dp"
+        android:text="Complete your order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_total_info" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_complete" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

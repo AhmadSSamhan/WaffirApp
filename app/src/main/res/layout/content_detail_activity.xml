@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_100"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".presentation.ui.activity.DetailActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager_detail"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/circle_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_gravity="bottom" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/blue_grey_100" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <include
+            layout="@layout/layout_product_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="5dp" />
+
+        <ImageView
+            android:id="@+id/img_fav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="20dp"
+            android:background="@drawable/ic_heart" />
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tv_available_colors"
+        style="@style/TextViewCompletePurchase"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/gradient_white_radius"
+        android:drawableStart="@null"
+        android:drawableLeft="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        tools:text="Red" />
+
+    <TextView
+        android:id="@+id/tv_quantity_available"
+        style="@style/TextViewCompletePurchase"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/gradient_white_radius"
+        android:drawableStart="@drawable/ic_layer"
+        android:drawableLeft="@drawable/ic_layer"
+        android:maxLines="1"
+        android:text="Quantity available: 5"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/tv_free_product"
+        layout="@layout/layout_free_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:visibility="gone" />
+
+
+    <com.android.waffirapp.util.ExpandTextView
+        android:id="@+id/tv_product_desc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:visibility="invisible"
+        android:background="@drawable/gradient_white_radius"
+        tools:text="@string/small_text" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:paddingStart="25dp"
+        android:paddingEnd="15dp"
+        android:text="@string/txt_similar_products"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/recycle_view_product_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_view_product_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layoutDirection="rtl"
+        app:layout_constraintBottom_toTopOf="@+id/view_stub_promo_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_add_to_cart"
+        style="@style/ButtonGreen"
+        android:layout_marginTop="-5dp"
+        android:layout_marginBottom="10dp"
+        android:text="Add to cart" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@android:color/transparent" />
+</LinearLayout>

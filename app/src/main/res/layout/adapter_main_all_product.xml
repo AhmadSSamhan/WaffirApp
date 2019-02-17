@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_main_all_product"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey_100">
+
+    <TextView
+        android:id="@+id/tv_product_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="14dp"
+        android:gravity="start"
+        android:maxLines="1"
+        android:textColor="@color/grey_700"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_view_all"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Top Deal" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="15dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layoutDirection="rtl"
+        app:layout_constraintBottom_toTopOf="@+id/view_stub_promo_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ViewStub
+        android:id="@+id/view_stub_promo_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout="@layout/layout_img_promo_inside_list"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recycler_view_product" />
+
+    <TextView
+        android:id="@+id/tv_view_all"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/gradient_view_all"
+        android:gravity="center"
+        android:text="View All"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

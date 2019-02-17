@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_gravity="bottom"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_part_one"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:background="@null"
+        app:elevation="0dp"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@color/nav_bottom_selector"
+        app:itemTextColor="@color/nav_bottom_text_selector"
+        app:menu="@menu/menu_navigation_bottom" />
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_weight="0.5">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="bottom"
+            android:background="@color/white" />
+
+        <ImageView
+            android:id="@+id/img_offer"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/txt_img_offers"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_offers_default" />
+
+    </FrameLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_part_two"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:background="@null"
+        app:elevation="0dp"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@color/nav_bottom_selector"
+        app:itemTextColor="@color/nav_bottom_text_selector"
+        app:menu="@menu/menu_navigation_bottom_two" />
+
+</LinearLayout>

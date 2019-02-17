@@ -1,0 +1,21 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/badge_frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_notifications_badge"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/gradient_badge_corner"
+        android:gravity="center|top"
+        android:maxLines="1"
+        android:padding="2dp"
+        android:text="9+"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+</FrameLayout>
